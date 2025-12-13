@@ -21,7 +21,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Nasi goreng dengan telur, ayam, dan sayuran segar',
                 'price' => 15000,
                 'category_id' => $categories->where('slug', 'makanan')->first()->id,
-                'image_path' => 'foods/nasi-goreng.jpg'
+                'image_path' => 'products/nasi-goreng.jpg'
             ],
             [
                 'name' => 'Mie Ayam Bakso',
@@ -29,7 +29,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Mie ayam dengan bakso urat dan pangsit goreng',
                 'price' => 12000,
                 'category_id' => $categories->where('slug', 'makanan')->first()->id,
-                'image_path' => 'foods/mie-ayam.jpg'
+                'image_path' => 'products/mie-ayam.jpg'
             ],
             [
                 'name' => 'Ayam Geprek',
@@ -37,7 +37,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Ayam crispy dengan sambal bawang yang menggugah selera',
                 'price' => 18000,
                 'category_id' => $categories->where('slug', 'makanan')->first()->id,
-                'image_path' => 'foods/ayam-geprek.jpg'
+                'image_path' => 'products/ayam-geprek.jpg'
             ],
             [
                 'name' => 'Gado-gado',
@@ -45,7 +45,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Salad Indonesia dengan sayuran segar dan bumbu kacang',
                 'price' => 10000,
                 'category_id' => $categories->where('slug', 'makanan')->first()->id,
-                'image_path' => 'foods/gado-gado.jpg'
+                'image_path' => 'products/gado-gado.jpg'
             ],
 
             // SNACK
@@ -55,7 +55,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Risoles goreng dengan isian ragout dan mayonnaise',
                 'price' => 5000,
                 'category_id' => $categories->where('slug', 'snack')->first()->id,
-                'image_path' => 'snacks/risoles.jpg'
+                'image_path' => 'products/risoles.jpg'
             ],
             [
                 'name' => 'Pastel',
@@ -63,7 +63,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Pastel goreng dengan isian bihun dan sayuran',
                 'price' => 4000,
                 'category_id' => $categories->where('slug', 'snack')->first()->id,
-                'image_path' => 'snacks/pastel.jpg'
+                'image_path' => 'products/pastel.jpg'
             ],
             [
                 'name' => 'Cimol Pedas',
@@ -71,7 +71,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Cimol kenyal dengan bubuk pedas',
                 'price' => 7000,
                 'category_id' => $categories->where('slug', 'snack')->first()->id,
-                'image_path' => 'snacks/cimol.jpg'
+                'image_path' => 'products/cimol.jpg'
             ],
             [
                 'name' => 'Kentang Goreng',
@@ -79,7 +79,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Kentang goreng crispy dengan saus tomat',
                 'price' => 8000,
                 'category_id' => $categories->where('slug', 'snack')->first()->id,
-                'image_path' => 'snacks/kentang-goreng.jpg'
+                'image_path' => 'products/kentang-goreng.jpg'
             ],
 
             // MINUMAN
@@ -89,7 +89,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Es teh segar dengan gula pasir',
                 'price' => 5000,
                 'category_id' => $categories->where('slug', 'minuman')->first()->id,
-                'image_path' => 'drinks/es-teh.jpg'
+                'image_path' => 'products/es-teh.jpg'
             ],
             [
                 'name' => 'Jus Alpukat',
@@ -97,7 +97,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Jus alpukat segar dengan susu dan gula aren',
                 'price' => 12000,
                 'category_id' => $categories->where('slug', 'minuman')->first()->id,
-                'image_path' => 'drinks/jus-alpukat.jpg'
+                'image_path' => 'products/jus-alpukat.jpg'
             ],
             [
                 'name' => 'Kopi Susu',
@@ -105,7 +105,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Kopi hitam dengan susu segar dan gula',
                 'price' => 8000,
                 'category_id' => $categories->where('slug', 'minuman')->first()->id,
-                'image_path' => 'drinks/kopi-susu.jpg'
+                'image_path' => 'products/kopi-susu.jpg'
             ],
             [
                 'name' => 'Es Jeruk',
@@ -113,7 +113,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Es jeruk segar dengan daging jeruk',
                 'price' => 7000,
                 'category_id' => $categories->where('slug', 'minuman')->first()->id,
-                'image_path' => 'drinks/es-jeruk.jpg'
+                'image_path' => 'products/es-jeruk.jpg'
             ],
 
             // ROTI
@@ -123,7 +123,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Roti bakar dengan isian coklat dan keju leleh',
                 'price' => 6000,
                 'category_id' => $categories->where('slug', 'roti')->first()->id,
-                'image_path' => 'breads/roti-coklat.jpg'
+                'image_path' => 'products/roti-coklat.jpg'
             ],
             [
                 'name' => 'Donat Gula',
@@ -131,7 +131,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Donat lembut dengan taburan gula halus',
                 'price' => 5000,
                 'category_id' => $categories->where('slug', 'roti')->first()->id,
-                'image_path' => 'breads/donat.jpg'
+                'image_path' => 'products/donat.jpg'
             ],
             [
                 'name' => 'Croissant',
@@ -139,7 +139,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Croissant buttery dengan tekstur berlapis',
                 'price' => 10000,
                 'category_id' => $categories->where('slug', 'roti')->first()->id,
-                'image_path' => 'breads/croissant.jpg'
+                'image_path' => 'products/croissant.jpg'
             ],
             [
                 'name' => 'Pisang Coklat',
@@ -147,7 +147,7 @@ class ProductSeeder extends Seeder
                 'description' => 'Roti pisang dengan coklat leleh',
                 'price' => 7000,
                 'category_id' => $categories->where('slug', 'roti')->first()->id,
-                'image_path' => 'breads/pisang-coklat.jpg'
+                'image_path' => 'products/pisang-coklat.jpg'
             ],
         ];
 

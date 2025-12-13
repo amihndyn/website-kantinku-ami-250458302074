@@ -13,6 +13,7 @@ use App\Livewire\BookmarksPage;
 use App\Livewire\DashboardPage;
 use App\Livewire\IndexPage;
 use App\Livewire\ProductsPage;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', IndexPage::class)->name('index');
@@ -22,7 +23,7 @@ Route::get('/bookmarks', BookmarksPage::class)->name('bookmarks');
 Route::get('/register', Register::class)->name('register');
 Route::get('/login', Login::class)->name('login');
 Route::post('/logout', function () {
-    auth()->logout();
+    Auth::logout();
     request()->session()->invalidate();
     request()->session()->regenerateToken();
     return redirect('/');

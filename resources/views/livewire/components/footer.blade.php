@@ -3,10 +3,12 @@
         <div class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
             <div>
                 <div class="flex items-center gap-2 mb-4">
-                    <div class="w-10 h-10 rounded-lg bg-[#8FABD4] dark:bg-blue-600 flex items-center justify-center transition-colors duration-300">
-                        <span class="text-white font-bold text-2xl">K</span>
-                    </div>
-                    <span class="font-bold text-xl dark:text-blue-400 transition-colors duration-300">KantinKu</span>
+                    <a href="/#home" class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-[#8FABD4] dark:bg-blue-600 flex items-center justify-center transition-colors duration-300">
+                            <span class="text-white font-bold text-lg">K</span>
+                        </div>
+                        <span class="font-bold text-xl text-[#8FABD4] dark:text-blue-400 hidden sm:inline transition-colors duration-300">KantinKu</span>
+                    </a>
                 </div>
                 <p class="text-gray-300 dark:text-gray-400 text-sm leading-relaxed transition-colors duration-300">
                     Platform pemesanan makanan kantin yang aman, <br class="hidden sm:block"> cepat, dan terpercaya untuk semua kalangan.

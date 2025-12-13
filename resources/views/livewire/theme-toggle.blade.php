@@ -4,12 +4,12 @@
         type="button"
         id="theme-toggle-button"
         class="relative w-12 h-6 rounded-full bg-gray-300 dark:bg-gray-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        aria-label="Toggle dark mode"
-    >
+        aria-label="Toggle dark mode">
+        
         <!-- Track -->
         <div class="absolute inset-0 rounded-full overflow-hidden">
-            <div id="sun-track" class="absolute inset-0 bg-gradient-to-r from-yellow-300 to-orange-400 opacity-0"></div>
-            <div id="moon-track" class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-600 opacity-100"></div>
+            <div id="sun-track" class="absolute inset-0 bg-gradient-to-r from-[#DFA924] to-[#DC6A32] opacity-0"></div>
+            <div id="moon-track" class="absolute inset-0 bg-gradient-to-r from-[#8FABD4] to-[#0C2B4E] opacity-100"></div>
         </div>
         
         <!-- Thumb/Handle -->

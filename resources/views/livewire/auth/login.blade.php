@@ -81,8 +81,12 @@
         </div>
       </form>
 
-      <!-- Register Link -->
+      <!-- Login Link -->
       <div class="mt-8 text-center">
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Belum punya akun?
+          <a href="{{ route('register') }}" wire:navigate class="font-medium text-[#8FABD4] hover:text-[#0C2B4E] transition duration-200">Daftar di sini</a>
+        </p>
       </div>
     </div>
 
