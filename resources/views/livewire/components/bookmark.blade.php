@@ -118,18 +118,12 @@
                             </div>
 
                             <!-- Action Buttons -->
-                            <div class="flex gap-2">
+                            <div>
                                 <button 
                                     wire:click="$dispatch('openProductDetail', { productId: {{ $product->id }} })"
                                     class="flex-1 px-3 py-2 bg-[#0C2B4E] dark:bg-blue-600 text-white text-sm rounded-lg hover:bg-[#163e6d] dark:hover:bg-blue-700 transition-colors font-medium"
                                 >
                                     <i class="fas fa-info-circle mr-1"></i> Detail
-                                </button>
-                                <button 
-                                    wire:click="$dispatch('addToCart', { productId: {{ $product->id }} })"
-                                    class="px-3 py-2 bg-green-600 dark:bg-green-700 text-white text-sm rounded-lg hover:bg-green-700 dark:hover:bg-green-600 transition-colors font-medium"
-                                >
-                                    <i class="fas fa-cart-plus"></i>
                                 </button>
                             </div>
                         </div>

@@ -28,7 +28,7 @@
                 justify-between items-start sm:items-center 
                 gap-4 mb-8">
                 <h2 class="text-2xl font-bold dark:text-white">
-                    Create New User
+                    Create New Product
                 </h2>
             </div>
 
@@ -126,57 +126,55 @@
                         <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Describe your product in detail</p>
                     </div>
 
-                    <!-- Product Image -->
+                    <!-- Image Field -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
-                            <span class="text-lg font-semibold">Product Image</span>
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Upload product image</p>
+                        <label for="image" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                            Product Image
                         </label>
-                        <div class="file-input-wrapper w-full">
-                            <div class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer">
-
-                                @if (!$fileSelected)
-                                    <i class="fas fa-cloud-upload-alt text-3xl text-gray-400 mb-3"></i>
-                                    <p class="text-gray-600 dark:text-gray-400 font-medium mb-1">Click to upload or drag and drop</p>
-                                    <p class="text-gray-500 dark:text-gray-500 text-sm">PNG, JPG, GIF up to 5MB</p>
-                                @else
-                                    <i class="fas fa-check-circle text-3xl text-green-500 mb-3"></i>
-                                    <p class="text-gray-600 dark:text-gray-400 font-medium mb-1">File selected:</p>
-                                    <p class="text-gray-500 dark:text-gray-500 text-sm">{{ $image->getClientOriginalName() }}</p>
-                                @endif
-
-                                <input type="file" wire:model="image" accept="image/*" class="w-full h-full absolute top-0 left-0 opacity-0 cursor-pointer" />
+                        <input type="file" 
+                            id="image"
+                            wire:model="image"
+                            accept="image/*"
+                            class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+                        @error('image')
+                            <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                        
+                        @if($image)
+                            <div class="mt-2">
+                                <p class="text-sm text-green-600">New image selected</p>
+                                <img src="{{ $image->temporaryUrl() }}" class="mt-2 h-32 w-32 object-cover rounded">
                             </div>
-                        </div>
-                        <div id="file-preview" class="hidden mt-4">
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Selected file:</p>
-                            <div class="flex items-center justify-between bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
-                                <div class="flex items-center">
-                                    <i class="fas fa-image text-blue-500 mr-3"></i>
-                                    <span id="file-name" class="text-gray-700 dark:text-gray-300"></span>
-                                </div>
-                                @if ($fileSelected)
-                                <button 
-                                    type="button" 
-                                    wire:click="$set('image', null); $set('fileSelected', false);" class="text-red-500 hover:text-red-700">
-                                    Remove file
-                                </button>
-                                @endif
-                                
+                        @elseif($product->image_path)
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-500">Current image:</p>
+                                <img src="{{ asset('storage/' . $product->image_path) }}" 
+                                    class="mt-2 h-32 w-32 object-cover rounded">
                             </div>
-                        </div>
+                        @endif
                     </div>
 
-                    <!-- Form Actions -->
-                    <div class="flex justify-end space-x-4 pt-8 border-t border-gray-100 dark:border-gray-700">
-                        <a href="{{ route('dashboard.products') }}" 
-                            class="px-8 py-3.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 smooth-transition font-medium text-base">
+                    <!-- Submit Button -->
+                    <div class="pt-4">
+                        <button type="submit" 
+                                wire:loading.attr="disabled"
+                                wire:target="update,image"
+                                class="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white rounded-lg transition font-medium text-base">
+                            <span wire:loading.remove wire:target="update">Update Product</span>
+                            <span wire:loading wire:target="update">
+                                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                Updating...
+                            </span>
+                        </button>
+                        
+                        <!-- Cancel Button -->
+                        <a href="{{ route('dashboard.products') }}"
+                        class="ml-3 px-8 py-3.5 bg-gray-300 hover:bg-gray-400 text-gray-800 rounded-lg transition font-medium text-base">
                             Cancel
                         </a>
-                        <button type="submit" 
-                            class="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg smooth-transition font-medium text-base">
-                            Save Product
-                        </button>
                     </div>
                 </form>
             </div>

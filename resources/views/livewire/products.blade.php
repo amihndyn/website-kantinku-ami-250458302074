@@ -8,12 +8,16 @@
                 <section id="menu" class="py-20">
                     <div class="max-w-7xl mx-auto px-6">
                         <!-- Judul -->
-                        <div class="text-center mb-14 bg-[#0C2B4E] dark:bg-gray-800 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300">
-                            <h2 class="text-4xl font-extrabold text-white mb-3">🍴 Daftar Menu</h2>
-                            <p class="text-white dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
-                                Temukan beragam makanan dan minuman favoritmu dari kantin dengan cita rasa terbaik!
-                            </p>
-                            <div class="w-24 h-1 bg-white dark:bg-blue-400 mx-auto mt-4 rounded-full transition-colors duration-300"></div>
+                        <div class="px-4 sm:px-6 lg:px-8">
+                            <div class="text-center mb-6 sm:mb-10 lg:mb-14 bg-[#0C2B4E] dark:bg-gray-800 rounded-2xl p-4 sm:p-6 lg:p-8 hover:shadow-lg lg:hover:shadow-2xl transition-all duration-300">
+                                <h2 class="text-xl sm:text-2xl lg:text-4xl font-bold lg:font-extrabold text-white mb-2 sm:mb-3">
+                                    🍴 Daftar Menu
+                                </h2>
+                                <p class="text-white/90 dark:text-gray-300 text-xs sm:text-sm lg:text-base max-w-2xl lg:max-w-4xl mx-auto px-1 sm:px-0">
+                                    Temukan beragam makanan dan minuman favoritmu dari kantin dengan cita rasa terbaik!
+                                </p>
+                                <div class="w-12 sm:w-16 lg:w-24 h-0.5 sm:h-1 bg-white/50 dark:bg-blue-400/70 mx-auto mt-3 sm:mt-4 lg:mt-4 rounded-full"></div>
+                            </div>
                         </div>
 
                         <div class="flex flex-col lg:flex-row gap-10">
@@ -29,7 +33,9 @@
                                         placeholder="Cari produk..." 
                                         class="w-full pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-600 
                                             rounded-lg focus:ring-2 focus:ring-[#0C2B4E] dark:focus:ring-blue-500 
-                                            focus:outline-none bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors duration-300" 
+                                            focus:outline-none bg-white dark:bg-gray-700 text-gray-900 
+                                            dark:text-white placeholder-gray-500 dark:placeholder-gray-400 
+                                            transition-colors duration-300" 
                                             wire:model.live.debounce.500ms="search">
                                         <i class="fa-solid fa-magnifying-glass absolute 
                                             left-3 top-2.5 text-gray-400 dark:text-gray-500 transition-colors duration-300"></i>

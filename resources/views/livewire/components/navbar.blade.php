@@ -61,6 +61,7 @@
             @auth
             <a href="{{ route('bookmarks') }}" class="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors font-medium">Bookmarks</a>
             @endauth
+            <livewire:theme-toggle />
             <div class="pt-2 border-t border-gray-200 dark:border-gray-700">
                 @guest
                 <a href="{{ route('login') }}" class="block px-4 py-3 text-center bg-[#0C2B4E] dark:bg-blue-600 text-white rounded-lg font-semibold hover:bg-[#1a3a5f] dark:hover:bg-blue-700 transition-colors duration-300">

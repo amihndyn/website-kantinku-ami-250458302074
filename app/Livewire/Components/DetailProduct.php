@@ -108,12 +108,6 @@ class DetailProduct extends Component
         $this->showPaymentModal = false;
     }
 
-    public function addToCart()
-    {
-        session()->flash('message', $this->product->name . ' berhasil ditambahkan ke keranjang!');
-        $this->closeDetail();
-    }
-
     public function showPayment()
     {
         $this->showPaymentModal = true;
