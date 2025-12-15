@@ -35,7 +35,7 @@
             <div class="hidden md:flex items-center gap-4">
                 @if(auth()->user()->role === 'admin')
                 <!-- Button Dashboard untuk Admin -->
-                <a href="{{ route('dashboard') }}" wire:navigate class="px-6 py-2 bg-[#8FABD4] dark:bg-blue-600 text-white rounded-lg font-semibold hover:bg-[#7a9bc7] dark:hover:bg-blue-700 transition-colors duration-300">
+                <a href="{{ route('dashboard') }}" class="px-6 py-2 bg-[#8FABD4] dark:bg-blue-600 text-white rounded-lg font-semibold hover:bg-[#7a9bc7] dark:hover:bg-blue-700 transition-colors duration-300">
                     Dashboard
                 </a>
                 @endif
@@ -91,7 +91,7 @@
                 @auth
                 <!-- Dashboard untuk Admin di Mobile -->
                 @if(auth()->user()->role === 'admin')
-                <a href="{{ route('dashboard') }}" wire:navigate class="block px-4 py-3 text-center hover:bg-[#7a9bc7] dark:hover:bg-blue-700 text-white rounded-lg font-semibold bg-[#8FABD4] dark:bg-blue-600 transition-colors duration-300 mb-2" style="min-height: 44px; display: flex; align-items: center; justify-content: center;">
+                <a href="{{ route('dashboard') }}" class="block px-4 py-3 text-center hover:bg-[#7a9bc7] dark:hover:bg-blue-700 text-white rounded-lg font-semibold bg-[#8FABD4] dark:bg-blue-600 transition-colors duration-300 mb-2" style="min-height: 44px; display: flex; align-items: center; justify-content: center;">
                     Dashboard
                 </a>
                 @endif

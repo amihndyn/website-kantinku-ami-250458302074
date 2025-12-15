@@ -6,14 +6,14 @@
                 <i class="fa-solid fa-bars text-gray-500 dark:text-gray-400 text-xl"></i>
             </button>
             
-            <a href="{{route("homepage") }}
+            <a href="{{route('homepage') }}"
                class="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 smooth-transition"
                title="Kembali ke Home">
                 <i class="fa-solid fa-house text-gray-500 dark:text-gray-400 text-xl"></i>
                 <span class="font-medium dark:text-white hidden md:inline">Home</span>
             </a>
             
-            <h1 class="font-bold text-2xl dark:text-white" id="page-title">Dashboard</h1>
+            <h1 class="font-bold text-2xl dark:text-white" id="page-title">Admin</h1>
         </div>
         <div class="flex items-center gap-4">
             <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 smooth-transition">
