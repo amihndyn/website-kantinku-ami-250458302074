@@ -16,7 +16,7 @@ use App\Livewire\ProductsPage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', IndexPage::class)->name('index');
+Route::get('/', IndexPage::class)->name('homepage');
 Route::get('/products', ProductsPage::class)->name('products');
 Route::get('/bookmarks', BookmarksPage::class)->name('bookmarks');
 
