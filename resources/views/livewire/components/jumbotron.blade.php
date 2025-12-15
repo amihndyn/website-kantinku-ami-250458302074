@@ -9,7 +9,7 @@
                 Daftar sekarang untuk akses penuh ke semua fitur!
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <a href="/products" wire:navigate 
+                <a href="/products"
                    class="px-8 py-3 bg-[#0C2B4E] dark:bg-blue-600 text-white font-bold rounded-lg 
                           hover:bg-[#163e6d] dark:hover:bg-blue-700 transition-colors duration-300">
                     Lihat Menu

@@ -221,14 +221,19 @@
                         <div class="relative mt-4">
                             <textarea 
                                 placeholder="Tulis komentarmu di sini..." 
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#8FABD4] dark:focus:ring-blue-500 focus:border-[#8FABD4] dark:focus:border-blue-500 resize-none text-sm transition-colors duration-200 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 
+                                    rounded-lg focus:ring-2 focus:ring-[#8FABD4] dark:focus:ring-blue-500 
+                                    focus:border-[#8FABD4] dark:focus:border-blue-500 resize-none text-sm 
+                                    transition-colors duration-200 bg-white dark:bg-gray-800 text-gray-900 
+                                    dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                                 rows="4"
                                 wire:model.defer="comment"
                                 id="comment-textarea"
                             ></textarea>
                             <button 
                                 wire:click="submitComment"
-                                class="px-3 py-1 bg-blue-500 dark:bg-blue-600 text-white rounded-lg hover:bg-blue-600 dark:hover:bg-blue-700 transition duration-200 text-sm">
+                                class="px-3 py-1 bg-blue-500 dark:bg-blue-600 text-white rounded-lg 
+                                    hover:bg-blue-600 dark:hover:bg-blue-700 transition duration-200 text-sm">
                                 Kirim
                             </button>
                         </div>
