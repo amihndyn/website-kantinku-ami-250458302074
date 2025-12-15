@@ -10,6 +10,7 @@ class Register extends Component
 {
     public $name;
     public $email;
+    public $role = 'buyer';
     public $nim;
     public $phone_number;
     public $password;
@@ -18,6 +19,7 @@ class Register extends Component
     protected $rules = [
         'name' => 'required|min:3',
         'email' => 'required|email|unique:users,email',
+        'role' => 'required|in:admin,buyer',
         'nim' => 'required|unique:users,nim',
         'phone_number' => 'required|unique:users,phone_number',
         'password' => 'required|min:6|confirmed'
@@ -30,6 +32,7 @@ class Register extends Component
         $user = User::create([
             'name' => $this->name,
             'email' => $this->email,
+            'role' => $this->role,
             'nim' => $this->nim,
             'phone_number' => $this->phone_number,
             'password' => Hash::make($this->password),
@@ -37,7 +40,7 @@ class Register extends Component
 
         session()->flash('success', 'Akun berhasil dibuat. Silakan login.');
 
-        return redirect()->route('login');
+        return redirect()->route('dashboard');
     }
 
     public function render()

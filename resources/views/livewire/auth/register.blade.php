@@ -89,12 +89,38 @@
               type="email" 
               wire:model="email"
               class="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0C2B4E] focus:border-transparent transition duration-200 @error('email') border-red-500 @enderror" 
-              placeholder="nama@email.com">
+              placeholder="nama@gmail.com">
           </div>
           @error('email') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
 
-        <!-- NIM -->
+        <!-- Role (Admin/Buyer) -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Role</label>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <select 
+              wire:model="role"
+              class="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0C2B4E] focus:border-transparent transition duration-200 appearance-none @error('role') border-red-500 @enderror">
+              <option value="">Pilih Role</option>
+              <option value="admin">Admin</option>
+              <option value="buyer">Buyer (Mahasiswa)</option> <!-- DIUBAH -->
+            </select>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+              <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          </div>
+          @error('role') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
+        </div>
+
+        <!-- NIM (Hanya tampil jika role buyer dipilih) -->
+        @if($role === 'buyer') <!-- DIUBAH -->
         <div>
           <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">NIM</label>
           <div class="relative">
@@ -111,6 +137,7 @@
           </div>
           @error('nim') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
+        @endif
 
         <!-- No Telp -->
         <div>
@@ -124,7 +151,7 @@
             <input 
               type="text"
               wire:model="phone_number"
-              class="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0C2B4E] focus:border-transparent transition duration-200 @error('nim') border-red-500 @enderror" 
+              class="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0C2B4E] focus:border-transparent transition duration-200 @error('phone_number') border-red-500 @enderror" 
               placeholder="Masukkan Nomor Telepon">
           </div>
           @error('phone_number') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror

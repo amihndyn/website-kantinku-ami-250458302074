@@ -39,7 +39,7 @@
               type="email" 
               wire:model="email"
               class="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg bg-white dark:bg-gray-800 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0C2B4E] focus:border-transparent transition duration-200" 
-              placeholder="nama@email.com"
+              placeholder="nama@gmail.com"
             >
           </div>
           @error('email') <span class="text-red-500 text-xs mt-1">{{ $message }}</span> @enderror

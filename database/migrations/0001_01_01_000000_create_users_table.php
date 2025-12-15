@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('nim', 20)->unique();
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email')->nullable()->unique();
             $table->string('password');
             $table->string('phone_number', 20)->nullable();
             $table->enum('role', ['admin', 'buyer'])->default('buyer');

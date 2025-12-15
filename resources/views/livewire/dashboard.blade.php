@@ -4,7 +4,6 @@
     <livewire:components.sidebar />
 
     <!-- Main Content -->
-    <!-- Main Content -->
 <main id="main-content" class="pt-16 sm:pt-20 md:pt-24 md:pl-0 lg:pl-64 smooth-transition min-h-screen">
     <div class="px-4 sm:px-6 lg:p-6">
         <!-- Dashboard Page -->
